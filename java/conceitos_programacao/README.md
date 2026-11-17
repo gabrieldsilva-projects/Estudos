@@ -1,40 +1,45 @@
-# Prof° Dr. Nelio Alves
+# Conceitos de Programação
 
-# Algoritmo
+> Material de estudo baseado nas aulas do Prof. Dr. Nélio Alves.
 
-Sequência finita de instruções para resolver um problema.
+## Algoritmo
 
-## Exemplo: 
+Um **algoritmo** é uma sequência finita de instruções utilizadas para resolver um problema.
 
-### Problema: Lavar roupa suja
+### Exemplo: lavar roupa suja
 
-### Algoritmo:
-1) Coloca a roupa em um recipiente
-2) Colocar um pouco de sabão e amaciante
-3) Encher de água
-4) Mexer tudo até dissolver todo o sabão 
-5) Deixar de molho por vinte minutos
-6) Esfregar a roupa
-7) Enxaguar 
-8) Torcer
+**Problema:** lavar roupas sujas.
 
-# Automação
+**Passos:**
 
-Consiste em utilizar máquina(s) para executar o procedimento desejado de fora automática ou semiautomática.
+1. Colocar a roupa em um recipiente.
+2. Colocar sabão e amaciante.
+3. Encher o recipiente com água.
+4. Mexer até dissolver o sabão.
+5. Deixar de molho por vinte minutos.
+6. Esfregar as roupas.
+7. Enxaguar.
+8. Torcer.
 
-# O que é preciso para se fazer um programa de computador?
+## Automação
 
-- Linguagem de programação: regras léxicas e sintáticas par se escrever o programa
-- IDE: software para editar e testar o programa
-- Compilador: software para transformar o código fonte em código objeto
-- Gerador de Códigos ou Máquina Virtual: software que permite que o programa seja executado
+**Automação** consiste em utilizar máquinas para executar um procedimento de forma automática ou semiautomática.
 
-## Linguagem de Programação
+## O que é necessário para criar um programa?
 
-Conjunto de regras léxicas (ortografia) e sintáticas (grámatica) para se escrever programas.
+- **Linguagem de programação:** fornece as regras léxicas e sintáticas para escrever o programa.
+- **IDE:** permite editar, executar e testar o programa.
+- **Compilador:** transforma o código-fonte em código objeto.
+- **Gerador de código ou máquina virtual:** permite executar o programa.
 
-## Exemplo de linguagem de programação :
+## Linguagem de programação
 
+Uma linguagem de programação é um conjunto de regras léxicas e sintáticas usado para escrever programas.
+
+### Exemplos
+
+- C
+- C++
 - C#
 - Java
 - Python
@@ -42,90 +47,98 @@ Conjunto de regras léxicas (ortografia) e sintáticas (grámatica) para se escr
 - JavaScript
 - Ruby
 
-## Léxica
+### Análise léxica
 
-Diz respito à correção das palavras "isoladas" (ortografia).
+A análise léxica verifica a correção das palavras isoladas, ou seja, está relacionada à **ortografia** da linguagem.
 
-## Sintática 
+### Análise sintática
 
-Diz respeit à correção das sentenças (grámatica).
+A análise sintática verifica a correção das sentenças e está relacionada à **gramática** da linguagem.
 
-# Exemplo (Português) :                                       Linguagem de Programação :
+### Comparação
 
-O cachorro está com fome.                                     x = 2 + y; 
-A cachorra está com fome. (Erro gramatical)                   x = + 2 y; (Erro de Sintaxe)
+| Português | Linguagem de programação |
+| --- | --- |
+| O cachorro está com fome. | `x = 2 + y;` |
+| A cachorra está com fome. — erro gramatical | `x = + 2 y;` — erro de sintaxe |
 
-# IDE : Ambiente Integrado de Desenvolvimento 
+## IDE — Ambiente de Desenvolvimento Integrado
 
-Conjunto de software utiliazdo para a contrução de programas.
+Uma **IDE** é um conjunto de softwares utilizado para construir programas.
 
-## Exemplos :
+### Exemplos
 
-- C/C++ : Code Blocks
-- Java : Eclipse, NetBeans
-- C# : Microsoft Visual Studio
+| Linguagem | IDE |
+| --- | --- |
+| C/C++ | Code::Blocks |
+| Java | Eclipse, IntelliJ IDEA, NetBeans |
+| C# | Microsoft Visual Studio |
 
-## Funcionalidades de uma IDE :
+### Funcionalidades
 
-- Edição de código fonte (endentação, autocompletar, destaque de palavras, etc.)
-- Depuração e testes
-- Construção do produto final (build)
-- Sugestão de modelos (teamplates)
-- Auxiliar em várias tarefas do seu projeto.
-- Etc.
+- Edição de código-fonte com indentação e destaque de sintaxe.
+- Autocompletar.
+- Depuração e testes.
+- Construção do produto final.
+- Sugestão de modelos.
+- Suporte a diversas tarefas do projeto.
 
-# Compilação e Interpretação do Código Fonte e Objeto Máquina Vitual
+## Código-fonte
 
-# Código Fonte : 
+O **código-fonte** é escrito pelo programador em uma linguagem de programação.
 
-Escrito pelo programador em linguagem de programação 
+Exemplo em Python:
 
-## Exemplo :
+```python
+print("Olá, mundo!")
+```
 
-Linguagem Python:
+## Compilação
 
-Print("Olá Mendo")
+O compilador realiza as análises léxica e sintática antes de gerar o código objeto.
 
-# Compilação 
- ______________                             _______________                                            ___________________
-|              |  COMPILADOR: compilação   |               |    Gerador de código: contrução (build)  |                   |
-| CÓDIGO FONTE | ========================> | CÓDIGO OBJETO |  ======================================> | CÓDIGO EXECUTÁVEL | ==> EXECUÇÃO
-|______________|       análise léxica      |_______________|              geração e código            |___________________|
-                             +
-                      análise sintática
+```mermaid
+flowchart LR
+    A[Código-fonte] -->|Compilador| B[Código objeto]
+    B -->|Gerador de código| C[Código executável]
+    C --> D[Execução]
+```
 
-# Interpretação
+### Características da compilação
 
- ______________                                       
-|              |    INTERPRETADOR: interpretação        
-| CÓDIGO FONTE | ==================================>  Execução
-|______________|          análise léxica
-                                 +
-                         análise sintática
-                                 +    
-                         geração de código
-                            SOB DEMANDA
+- Gera um programa executável mais rápido.
+- Permite que o compilador identifique erros antes da execução.
 
+## Interpretação
 
-# Abordagem Híbrida
+No modelo interpretado, o interpretador lê o código-fonte e executa as instruções sob demanda.
 
- ______________                                ______________                                       
-|              |  COMPILADOR: precompilador   |              |    Máquina Vitrtual: interpretação                          
-| CÓDIGO FONTE | ========================>    |   ByteCode   |  ===================================> EXECUÇÃO
-|______________|       análise léxica         |______________|           geração e código            
-                             +                                             SOB DEMANDA
-                      análise sintática
+```mermaid
+flowchart TD
+    A[Código-fonte] --> B[Interpretador]
+    B --> C[Análise léxica]
+    B --> D[Análise sintática]
+    B --> E[Geração de código]
+    B --> F[Execução sob demanda]
+```
 
+### Características da interpretação
 
-## Vantagens :
+- Facilita a manutenção de aplicativos em produção.
+- Permite maior expressividade ao escrever soluções em poucas linhas.
+- Pode permitir a execução em diferentes plataformas sem recompilar o código-fonte.
 
-### Compilação :
+## Abordagem híbrida
 
-- Velocidade do programa
-- Auxilio do compilador antes da execução 
+Algumas linguagens combinam pré-compilação e interpretação por meio de uma máquina virtual.
 
-### Interpretação :
+```mermaid
+flowchart LR
+    A[Código-fonte] -->|Pré-compilador| B[Bytecode]
+    B -->|Máquina virtual| C[Execução]
 
-- Flexibilidade de manutenção do aplicativo em produçaõ
-- Expressividade da linguagem (Capaciadade de escrever uma solução elegante em poucas linhas)
-- Código fonte não precisa ser recomplida para rodar em plataformas diferentes.
+    A -.-> D[Análise léxica]
+    A -.-> E[Análise sintática]
+    B -.-> F[Interpretação sob demanda]
+    B -.-> G[Geração de código sob demanda]
+```
