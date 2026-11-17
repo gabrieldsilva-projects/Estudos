@@ -1,2 +1,3 @@
 # Estudos
-Repositorio para Estudos, como por exemplo, bootcamp, certificações avulsas
+
+Repositorio para estudos, como por exemplo, bootcamp, certificações avulsas
