@@ -10,7 +10,7 @@
 | --- | --- |
 | **+** | Adição |
 | **-** | Subtração |
-| ** * ** | Multiplicação |
+| * | Multiplicação |
 | **/** | Divisão |
 | **%** | Resto da divisão ("mod") |
 
