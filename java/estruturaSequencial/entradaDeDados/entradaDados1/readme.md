@@ -1,51 +1,53 @@
-# 📘 Processamento de Dados em Java
+# 📘 Entrada de dados em Java
 
 > Material de estudo baseado nas aulas do **Prof. Dr. Nélio Alves**.
 
 Neste material, você aprenderá a ler dados digitados pelo usuário usando a classe `Scanner`.
 
-## 📌 Scanner
+## 📌 `Scanner`
 
-Para fazer entrada de dados, cria-se um objeto do tipo "Scanner"
+Para ler dados do teclado, crie um objeto do tipo `Scanner`:
 
-### Sintaxe:
+### Sintaxe
 ```java
 Scanner sc = new Scanner(System.in);
 ```
 
-> Para utilizar o objeto `Scanner`, é necessário importar `java.util.Scanner` no começo do programa.
-> Faça `sc.close()` quando não for mais necessário utilizar o objeto `sc` (`Scanner sc`).
+> Importe `java.util.Scanner` no início do programa.
+> Feche o `Scanner` com `sc.close()` quando não precisar mais dele. Isso também fecha `System.in`.
 
-# Para ler uma `String`
+## Para ler uma `String`
 
-## Sintaxe
+### Sintaxe
 ```java
 x = sc.next();
 ```
 
-> O método `next()` lê a próxima palavra digitada, até encontrar um espaço em branco.
+> O método `next()` lê o próximo token, encerrando a leitura ao encontrar um espaço em branco.
 
-# Para ler números `Int`
+## Para ler um número inteiro (`int`)
 
-## Sintaxe 
+### Sintaxe
 ```java
 x = sc.nextInt();
 ```
 
 > O método `nextInt()` lê o próximo número inteiro digitado.
 
-# Para ler números `Double` ou número com ponto flutuante
+## Para ler um número decimal (`double`)
 
-## Sintaxe 
+### Sintaxe
 ```java
 x = sc.nextDouble();
 ```
 
-> **ATENÇÃO**
-> Para considerar o separador de decimais como ponto, **ANTES** da declaração do `Scanner`, use:
-> `Locale.setDefault(Locale.US);`
+> **Atenção:** para usar o ponto como separador decimal, importe `java.util.Locale` e configure o padrão antes de criar o `Scanner`:
+> ```java
+> Locale.setDefault(Locale.US);
+> Scanner sc = new Scanner(System.in);
+> ```
 
-# Para ler um caracter (char)
+## Para ler um caractere (`char`)
 
 ## Sintaxe
 
@@ -53,12 +55,14 @@ x = sc.nextDouble();
 x = sc.next().charAt(0);
 ```
 
-> O método `next()` lê a String digitada, e a função `charAt(0)` lê o primeiro caractere.
+> O método `next()` lê o próximo token, e `charAt(0)` retorna seu primeiro caractere.
 
-# Para ler vários dados na mesma linha
- 
+## Para ler vários dados na mesma linha
+
 ```java
 x = sc.next();
 y = sc.nextInt();
 z = sc.nextDouble();
 ```
+
+> Cada chamada lê o próximo valor da entrada, mesmo que eles estejam separados por espaços na mesma linha.
