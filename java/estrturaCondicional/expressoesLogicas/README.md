@@ -7,7 +7,7 @@
 | Operador | Significado |
 | :---: | :--- |
 | `&&` | E (AND) |
-| `||` | OU (OR) |
+| <code>&#124;&#124;</code> | OU (OR) |
 | `!` | NÃO (NOT) |
 
 ## Aplicação:
