@@ -33,43 +33,45 @@ Obter uma habilitação de motorista se:
 #### Exemplos de expressões lógicas  
 
 **(suponha x igual a 5)**
-    x <= 20 && x == 10
 
-| Tabela Verdade |
-| :===: | :--- |
-| X <= 20 | `Verdadeiro` |
-| X == 10 | `Falso`|
+```java
+x <= 20 && x == 10
+```
 
-> Resultado == F
+| Condição | Valor lógico |
+| :--- | :---: |
+| x <= 20 | `V` |
+| x == 10 | `F` |
+
+> Resultado: `F`
 
     x > 0 && x != 3 
 
-| Tabela Verdade |
-| :---: | :--- | 
-| x > 0 | `Verdadeiro` |
-| x != 3 | `Verdadeiro`|
+| Condição | Valor lógico |
+| :--- | :---: |
+| x > 0 | `V` |
+| x != 3 | `V` |
 
 > Resultado == V
 
     x <= 20 && x == 10 && x != 3 
 
-| Tabela Verdade |
-| :---: | :--- | 
-| X <= 20 | `Verdadeiro` | 
-| x == 10 | `Falso` |
-| x != 3 | `Verdadeiro`|
+| Condição | Valor lógico |
+| :--- | :---: |
+| x <= 20 | `V` |
+| x == 10 | `F` |
+| x != 3 | `V` |
 
 > Resultado == F
 
-## Tabela verdade do operador "E" 
+## Tabela verdade do operador "E"
 
-| A | B | A && B | 
-| :---: | :---: | :--- | 
-| `F` | `F` | `F` | 
-| `F` | `V` | `F` | 
-| `V` | `V` | `F` | 
+| A | B | A && B |
+| :---: | :---: | :---: |
+| `F` | `F` | `F` |
+| `F` | `V` | `F` |
 | `V` | `F` | `F` |
-| `V` | `V` | `V` | 
+| `V` | `V` | `V` |
 
 
 ### Ideia por trás do operador "OU"
@@ -93,42 +95,49 @@ Estacionar na vaga especial se:
 #### Exemplos de expressões lógicas 
 
 **(suponha x igual a 5)**
-    x == 10 || x <= 20 
 
-| Tabela verdade | 
-| :---: | :--- | 
-| x == 10 | `F` |  
-| x <= 20 | `V` | 
+```java
+x == 10 || x <= 20
+```
 
-> Resultado == V 
+| Condição | Valor lógico |
+| :--- | :---: |
+| x == 10 | `F` |
+| x <= 20 | `V` |
 
-    x > 0 || x != 3 
+> Resultado: `V`
 
-| Tabela veradade |
-| :---: | :--- | 
+```java
+x > 0 || x != 3
+```
+
+| Condição | Valor lógico |
+| :--- | :---: |
 | x > 0 | `V` |
 | x != 3 | `V` |
 
-> Resultado == V
+> Resultado: `V`
 
-    x <= 0 || x != 3 || x != 5
+```java
+x <= 0 || x != 3 || x != 5
+```
 
-| Tabela veradade |
-| :---: | :--- | 
+| Condição | Valor lógico |
+| :--- | :---: |
 | x <= 0 | `F` |
 | x != 3 | `V` |
 | x != 5 | `F` |
 
-> Resultado == V
+> Resultado: `V`
 
-## Tabela verdade do operador "OU" 
+## Tabela verdade do operador "OU"
 
-| A | B | A && B | 
-| :---: | :---: | :--- | 
-| `F` | `F` | `F` | 
-| `F` | `V` | `V` | 
-| `V` | `F` | `V` | 
-| `V` | `V` | `V` | 
+| A | B | A \|\| B |
+| :---: | :---: | :---: |
+| `F` | `F` | `F` |
+| `F` | `V` | `V` |
+| `V` | `F` | `V` |
+| `V` | `V` | `V` |
 
 ### Ideia por trás do operador "NÃO"
 
@@ -146,36 +155,38 @@ Direito a receber uma bolsa de estudos se:
 **(suponha x igual a 5)**
     !(x == 10)
 
-| Tabela verdade | 
-| :---: | :--- | 
-| x == 10 | `F` |  
-| **!(x == 10 )** | `V` | 
+| Condição | Valor lógico |
+| :--- | :---: |
+| x == 10 | `F` |
+| !(x == 10) | `V` |
 
 > Resultado == V
 
     !(x >= 2)
 
-| Tabela verdade | 
-| :---: | :--- | 
-| x >= 2 | `V` |  
-| **!(x >= 2 )** | `F` |
+| Condição | Valor lógico |
+| :--- | :---: |
+| x >= 2 | `V` |
+| !(x >= 2) | `F` |
 
 > Resultado == F
 
-    !(x <= 20 && x == 10)
+```java
+!(x <= 20 && x == 10)
+```
 
-| Tabela verdade | 
-| :---: | :--- | 
-| x <= 20 | `V` |  
-| x == 10 | `F` |  
-| (x <= 20 && X == 10 )| `F` |
-| **!(x <= 20 && X == 10 )** | `V` |
+| Condição | Valor lógico |
+| :--- | :---: |
+| x <= 20 | `V` |
+| x == 10 | `F` |
+| (x <= 20 && x == 10) | `F` |
+| !(x <= 20 && x == 10) | `V` |
 
-> Resultado == V
+> Resultado: `V`
 
 ## Tabela verdade do operador "NÃO"
 
-| A | !A | 
-| :---: | | :--- | 
-| `F` | `V` | 
+| A | !A |
+| :---: | :---: |
+| `F` | `V` |
 | `V` | `F` |
