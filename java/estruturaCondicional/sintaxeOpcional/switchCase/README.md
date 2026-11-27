@@ -18,7 +18,7 @@ switch ( expressão ) {
             comando3
             comando4
             break;
-default:
+    default:
             comando5
             comando6
             break;
